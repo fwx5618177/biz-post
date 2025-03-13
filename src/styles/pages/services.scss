@@ -1,0 +1,193 @@
+@import '../variables';
+@import '../mixins';
+
+.services {
+  padding: 5rem 0;
+  background-color: $dark-bg;
+  color: $text-light;
+  
+  &__hero {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 5rem;
+    
+    &-title {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: $text-light;
+      
+      span {
+        color: $primary-color;
+      }
+      
+      @include mobile {
+        font-size: 2.2rem;
+      }
+    }
+    
+    &-description {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: $text-light-secondary;
+      
+      @include mobile {
+        font-size: 1rem;
+      }
+    }
+  }
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &__card {
+    background-color: $dark-bg-secondary;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid $border-color;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background-color: rgba($primary-color, 0.1);
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      color: $primary-color;
+      
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    
+    &-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: $text-light;
+    }
+    
+    &-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: $text-light-secondary;
+      margin-bottom: 2rem;
+    }
+    
+    &-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      margin-top: auto;
+      
+      li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: $text-light-secondary;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+        
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0.5rem;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+  
+  &__process {
+    margin-top: 5rem;
+    
+    &-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      text-align: center;
+      color: $text-light;
+      position: relative;
+      display: inline-block;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.75rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background-color: $primary-color;
+      }
+    }
+    
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    &-step {
+      text-align: center;
+      
+      &-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: $primary-color;
+        opacity: 0.3;
+        margin-bottom: 1rem;
+      }
+      
+      &-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: $text-light;
+      }
+      
+      &-description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: $text-light-secondary;
+      }
+    }
+  }
+} 

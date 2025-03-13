@@ -1,0 +1,129 @@
+@import '../variables';
+
+.hero {
+  padding: $spacing-2xl 0;
+  background-color: $background-dark;
+  position: relative;
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    max-width: 600px;
+
+    @media (min-width: $breakpoint-md) {
+      flex: 1;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-2xl;
+    font-weight: 700;
+    margin-bottom: $spacing-md;
+    color: $text-color;
+    line-height: 1.2;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: $font-size-3xl;
+    }
+
+    span {
+      color: $primary-color;
+    }
+  }
+
+  &__description {
+    font-size: $font-size-md;
+    color: $text-secondary;
+    margin-bottom: $spacing-lg;
+    line-height: 1.6;
+  }
+
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+    margin-top: $spacing-lg;
+
+    &-primary {
+      background-color: $primary-color;
+      color: $text-color;
+      border-radius: $border-radius-md;
+      padding: $spacing-sm $spacing-lg;
+      font-size: $font-size-base;
+      font-weight: 500;
+      transition: background-color $transition-fast;
+      
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+
+    &-secondary {
+      background-color: transparent;
+      color: $text-color;
+      border: 1px solid $border-color;
+      border-radius: $border-radius-md;
+      padding: $spacing-sm $spacing-lg;
+      font-size: $font-size-base;
+      font-weight: 500;
+      transition: all $transition-fast;
+      
+      &:hover {
+        border-color: $primary-color;
+        color: $primary-color;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+    @media (min-width: $breakpoint-md) {
+      flex: 1;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: $border-radius-lg;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__shape {
+    position: absolute;
+    z-index: -1;
+    
+    &--1 {
+      top: -100px;
+      right: -100px;
+      width: 300px;
+      height: 300px;
+      background-color: rgba($primary-color, 0.05);
+      border-radius: 50%;
+    }
+    
+    &--2 {
+      bottom: -150px;
+      left: -150px;
+      width: 400px;
+      height: 400px;
+      background-color: rgba($secondary-color, 0.05);
+      border-radius: 50%;
+    }
+  }
+} 

@@ -1,0 +1,14 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#2A2C39"/>
+  <rect x="100" y="100" width="400" height="200" rx="10" fill="#6C5CE7" fill-opacity="0.2"/>
+  <rect x="150" y="130" width="300" height="40" rx="5" fill="#6C5CE7" fill-opacity="0.5"/>
+  <rect x="150" y="180" width="140" height="90" rx="5" fill="#6C5CE7" fill-opacity="0.7"/>
+  <rect x="310" y="180" width="140" height="90" rx="5" fill="#6C5CE7" fill-opacity="0.4"/>
+  <circle cx="220" cy="225" r="30" fill="white" fill-opacity="0.2"/>
+  <path d="M200 225 L240 225" stroke="white" stroke-width="2"/>
+  <path d="M220 205 L220 245" stroke="white" stroke-width="2"/>
+  <rect x="330" y="200" width="100" height="10" rx="5" fill="white" fill-opacity="0.3"/>
+  <rect x="330" y="220" width="80" height="10" rx="5" fill="white" fill-opacity="0.3"/>
+  <rect x="330" y="240" width="60" height="10" rx="5" fill="white" fill-opacity="0.3"/>
+  <text x="300" y="350" text-anchor="middle" font-family="Arial" font-size="24" fill="white">Healthcare Dashboard</text>
+</svg> 

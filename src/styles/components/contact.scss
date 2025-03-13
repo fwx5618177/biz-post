@@ -1,0 +1,185 @@
+@import '../variables';
+
+.contact {
+  padding: $spacing-2xl 0;
+  background-color: $background-dark;
+  position: relative;
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    flex: 1;
+
+    @media (min-width: $breakpoint-md) {
+      max-width: 500px;
+    }
+  }
+
+  &__title {
+    font-size: $font-size-2xl;
+    font-weight: 700;
+    margin-bottom: $spacing-md;
+    color: $text-color;
+    line-height: 1.2;
+
+    span {
+      color: $primary-color;
+    }
+  }
+
+  &__description {
+    font-size: $font-size-md;
+    color: $text-secondary;
+    margin-bottom: $spacing-lg;
+    line-height: 1.6;
+  }
+
+  &__info {
+    margin-top: $spacing-xl;
+    
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: $spacing-md;
+      
+      &-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba($primary-color, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: $spacing-md;
+        flex-shrink: 0;
+        
+        svg {
+          width: 20px;
+          height: 20px;
+          color: $primary-color;
+        }
+      }
+      
+      &-content {
+        h4 {
+          font-size: $font-size-base;
+          font-weight: 600;
+          color: $text-color;
+          margin-bottom: $spacing-xs;
+        }
+        
+        p, a {
+          font-size: $font-size-sm;
+          color: $text-secondary;
+          line-height: 1.6;
+          transition: color $transition-fast;
+        }
+        
+        a:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  &__form {
+    flex: 1;
+    background-color: $background-card;
+    border-radius: $border-radius-lg;
+    padding: $spacing-xl;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba($border-color, 0.3);
+    
+    &-title {
+      font-size: $font-size-xl;
+      font-weight: 600;
+      margin-bottom: $spacing-lg;
+      color: $text-color;
+    }
+    
+    &-group {
+      margin-bottom: $spacing-md;
+      
+      label {
+        display: block;
+        font-size: $font-size-sm;
+        font-weight: 500;
+        color: $text-color;
+        margin-bottom: $spacing-xs;
+      }
+      
+      input, textarea {
+        width: 100%;
+        padding: $spacing-sm $spacing-md;
+        border: 1px solid rgba($border-color, 0.5);
+        border-radius: $border-radius-md;
+        background-color: $background-dark;
+        font-size: $font-size-sm;
+        color: $text-color;
+        transition: border-color $transition-fast;
+        
+        &:focus {
+          border-color: $primary-color;
+          outline: none;
+        }
+
+        &::placeholder {
+          color: $text-secondary;
+        }
+      }
+      
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+    }
+    
+    &-button {
+      width: 100%;
+      background-color: $primary-color;
+      color: $text-color;
+      border-radius: $border-radius-md;
+      padding: $spacing-sm 0;
+      font-size: $font-size-base;
+      font-weight: 500;
+      transition: background-color $transition-fast;
+      
+      &:hover {
+        background-color: lighten($primary-color, 5%);
+      }
+    }
+  }
+
+  &__shape {
+    position: absolute;
+    z-index: -1;
+    
+    &--1 {
+      top: -100px;
+      right: -100px;
+      width: 300px;
+      height: 300px;
+      background-color: rgba($primary-color, 0.05);
+      border-radius: 50%;
+    }
+    
+    &--2 {
+      bottom: -150px;
+      left: -150px;
+      width: 400px;
+      height: 400px;
+      background-color: rgba($secondary-color, 0.05);
+      border-radius: 50%;
+    }
+  }
+} 
